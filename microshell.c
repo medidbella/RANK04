@@ -248,10 +248,9 @@ void ft_devider(char **av, int i, char **env)
 		return ;
 	if (!ft_strcmp(av[i], ";") || !av[i])
 		i--;
-	while (ft_strcmp(av[i], ";") && i > 0)
+	while (ft_strcmp(av[i], ";") && i >= 0)
 		i--;
-	if (!ft_strcmp(av[i], ";") || i < 0)
-		i++;
+	i++;
 	ft_pipe_line(av, i, env);
 	return ;
 }
