@@ -174,11 +174,6 @@ int	executer(char **av, int i, int number, int count, char **env, int prev_fd)
 	int fds[2];
 	int pos;
 
-	if ((!av[i] && !ft_strcmp(av[i - 1], "|")) || i == 0)
-	{
-		close(prev_fd);
-		return (1);
-	}
 	pos = get_pos(number, count);
 	cmd_av = get_cmd(av, i);
 	if (pos == MIDDLE || pos == FIRST)
